@@ -9,7 +9,12 @@ repository = "https://github.com/oefd/tokio-socketcan"
 
 [dependencies]
 socketcan = "1.7"
-futures = "0.1"
-tokio = "0.1"
+futures-preview = { version = "=0.3.0-alpha.18", features = ["async-await", "nightly"] }
+futures-util-preview = { version = "=0.3.0-alpha.18", features = ["async-await", "nightly"] }
+tokio = "0.2.0-alpha.2"
+tokio-net = "0.2.0-alpha.1"
 mio = "0.6"
 libc = "0.2"
+
+[dev-dependencies]
+runtime = { git = "https://github.com/rustasync/runtime.git", branch = "master" }
