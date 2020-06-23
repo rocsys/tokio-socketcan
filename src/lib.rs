@@ -177,7 +177,7 @@ impl CANSocket {
     /// Clone the CANSocket by using the `dup` syscall to get another
     /// file descriptor. This method makes clones fairly cheap and
     /// avoids complexity around ownership
-    fn try_clone(&self) -> Result<Self, Error> {
+    pub fn try_clone(&self) -> Result<Self, Error> {
         let fd = self.0.get_ref().0.as_raw_fd();
         unsafe {
             // essentially we're cheating and making it cheaper/easier
