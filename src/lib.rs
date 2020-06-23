@@ -48,6 +48,7 @@ use tokio::io::PollEvented;
 
 use socketcan;
 pub use socketcan::CANFrame;
+pub use socketcan::CANFilter;
 pub use socketcan::CANSocketOpenError;
 
 #[derive(Debug, ThisError)]
